@@ -2,60 +2,89 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Asyar SmartLearn Classes</title>
+<title>Asyar Tutor Classes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
 margin:0;
 font-family:Segoe UI, sans-serif;
-background:#eef7ff;
-scroll-behavior:smooth;
+background:linear-gradient(to right,#d9fff3,#eafffb);
+color:#033;
 }
 
 /* NAVBAR */
 nav{
-background:#0a66c2;
+background:#19c37d;
 color:white;
-padding:15px;
+padding:16px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
+font-size:20px;
+font-weight:600;
 }
-nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-weight:500;
-}
-nav a:hover{opacity:0.8}
 
-/* HERO */
+/* HERO TEXT */
 .hero{
 text-align:center;
-padding:80px 20px;
-background:linear-gradient(to right,#4da6ff,#0a66c2);
-color:white;
-animation:fade 1.5s;
+padding:50px 20px 20px;
 }
-.hero h1{font-size:42px;margin:0}
-.hero p{font-size:18px}
+.hero h1{
+margin:0;
+font-size:40px;
+color:#065f46;
+}
+.hero p{
+font-size:18px;
+opacity:0.8;
+}
 
-/* SECTION */
+/* FORM */
+.form-box{
+background:white;
+max-width:420px;
+margin:30px auto;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+input,select,textarea{
+width:100%;
+padding:13px;
+margin:12px 0;
+border-radius:10px;
+border:1px solid #cbd5e1;
+font-size:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+background:#19c37d;
+color:white;
+border:none;
+border-radius:10px;
+font-size:17px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+button:hover{
+background:#14a46a;
+}
+
+/* SUBJECT SECTION */
 .section{
-padding:60px 20px;
+padding:50px 20px;
 text-align:center;
 }
 .title{
-font-size:32px;
+font-size:30px;
 margin-bottom:30px;
-color:#003366;
+color:#065f46;
 }
-
-/* SUBJECT CARDS */
 .cards{
 display:flex;
 flex-wrap:wrap;
@@ -65,80 +94,43 @@ gap:25px;
 .card{
 background:white;
 padding:25px;
-width:240px;
-border-radius:15px;
-box-shadow:0 6px 18px rgba(0,0,0,0.1);
-transition:0.3s;
+width:230px;
+border-radius:16px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:.3s;
 }
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-7px);
 }
-.card h3{margin:10px 0}
-
-/* FORM */
-.form-box{
-background:white;
-max-width:420px;
-margin:auto;
-padding:30px;
-border-radius:15px;
-box-shadow:0 6px 18px rgba(0,0,0,0.1);
-animation:fade 1.5s;
-}
-
-input,select,textarea{
-width:100%;
-padding:12px;
-margin:12px 0;
-border-radius:8px;
-border:1px solid #ccc;
-font-size:15px;
-}
-
-button{
-width:100%;
-padding:14px;
-border:none;
-background:#25D366;
-color:white;
-font-size:17px;
-border-radius:8px;
-cursor:pointer;
-font-weight:bold;
-}
-button:hover{background:#1ebe5d}
+.card h3{margin:10px 0;color:#047857}
 
 /* FOOTER */
 footer{
-background:#003366;
+background:#065f46;
 color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
 }
 
-/* FLOAT WHATSAPP */
+/* WHATSAPP ICON BUTTON */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
-background:#25D366;
-color:white;
 width:65px;
 height:65px;
 border-radius:50%;
+background:white;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:30px;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
 text-decoration:none;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
+transition:.3s;
 }
-
-/* ANIMATION */
-@keyframes fade{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
+.whatsapp:hover{
+transform:scale(1.1);
 }
 </style>
 </head>
@@ -147,65 +139,23 @@ to{opacity:1;transform:translateY(0)}
 
 <!-- NAVBAR -->
 <nav>
-<div><b>Asyar Tutor</b></div>
-<div>
-<a href="#">Home</a>
-<a href="#courses">Courses</a>
-<a href="#form">Enroll</a>
-</div>
+<div>ASYAR TUTOR</div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-<h1>Interactive Online Classes</h1>
-<p>Personal Attention • Doubt Solving • One-to-One Learning</p>
-</section>
-
-<!-- SUBJECTS -->
-<section id="courses" class="section">
-<div class="title">Subjects We Teach</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>Mathematics</h3>
-<p>Concept clarity + shortcuts + tricks</p>
+<div class="hero">
+<h1>Interactive Learning Classes</h1>
+<p>Support • Development • Personal Guidance</p>
 </div>
-
-<div class="card">
-<h3>Science</h3>
-<p>Easy explanations with examples</p>
-</div>
-
-<div class="card">
-<h3>English</h3>
-<p>Grammar + spoken skills</p>
-</div>
-
-<div class="card">
-<h3>Computer</h3>
-<p>Basics to advanced concepts</p>
-</div>
-
-<div class="card">
-<h3>Exam Preparation</h3>
-<p>Test series + revision plan</p>
-</div>
-
-</div>
-</section>
 
 <!-- FORM -->
-<section id="form" class="section">
-<div class="title"> Send Enquiry</div>
-
 <div class="form-box">
 
 <form action="https://formsubmit.co/surajkendre0089@gmail.com" method="POST">
 
 <input type="text" name="Student Name" placeholder="Student Name" required>
 
-<input type="tel" name="Phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+<input type="tel" name="Phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
 
 <select name="Class" required>
 <option value="">Select Class</option>
@@ -229,20 +179,57 @@ to{opacity:1;transform:translateY(0)}
 <input type="hidden" name="_captcha" value="false">
 <input type="hidden" name="_next" value="https://swaraj0011.github.io/asayar.github.io/asyar.html">
 
-<button type="submit">submit</button>
+<button type="submit">Enroll Now</button>
 
 </form>
+</div>
+
+<!-- SUBJECTS -->
+<section class="section">
+<div class="title">Subjects We Teach</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Mathematics</h3>
+<p>Concept clarity & problem solving</p>
+</div>
+
+<div class="card">
+<h3>Science</h3>
+<p>Easy understanding methods</p>
+</div>
+
+<div class="card">
+<h3>English</h3>
+<p>Grammar & communication</p>
+</div>
+
+<div class="card">
+<h3>Computer</h3>
+<p>Practical learning skills</p>
+</div>
+
 </div>
 </section>
 
 <footer>
-© 2026 Asyar SmartLearn | All Rights Reserved
+© 2026 Asyar Tutor Classes
 </footer>
 
-<!-- FLOAT WHATSAPP -->
+<!-- WhatsApp Icon Bubble -->
 <a class="whatsapp"
 href="https://wa.me/917822808496?text=Hello%20I%20want%20demo%20class"
-target="_blank">💬</a>
+target="_blank">
+
+<svg viewBox="0 0 32 32" width="34" height="34">
+<path fill="#25D366"
+d="M16 .4C7.4.4.5 7.3.5 15.9c0 2.8.7 5.5 2.1 7.9L.4 31.6l8-2.1c2.3 1.3 4.9 2 7.6 2 8.6 0 15.5-6.9 15.5-15.5S24.6.4 16 .4z"/>
+<path fill="#fff"
+d="M24.5 19.4c-.4-.2-2.4-1.2-2.8-1.3-.4-.2-.7-.2-1 .2s-1.1 1.3-1.4 1.6c-.3.3-.5.3-.9.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.1-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3 0-.6-.1-.8s-1-2.4-1.4-3.3c-.3-.8-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.9s1.6 4.5 1.8 4.8c.2.3 3.1 4.7 7.5 6.6 1 .4 1.8.6 2.4.8 1 .3 1.9.2 2.6.1.8-.1 2.4-1 2.7-1.9.3-.9.3-1.6.2-1.8-.1-.2-.4-.3-.8-.5z"/>
+</svg>
+
+</a>
 
 </body>
 </html>
